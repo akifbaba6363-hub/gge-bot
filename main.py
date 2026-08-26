@@ -1,4 +1,9 @@
-def oyuncu_bilgisi_getir(isim):
-    return f"{isim} isimli oyuncu aranıyor... Yakında cevap gelecek reis."
+from flask import Flask
+app = Flask(__name__)
 
-print(oyuncu_bilgisi_getir("test"))
+@app.route("/")
+def anasayfa():
+    return "Bot calisiyor reis!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
